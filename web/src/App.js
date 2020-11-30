@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import ReviewCard from './components/card';
+import ReviewCard from './components/Card/Card';
 
 function App() {
   return (
