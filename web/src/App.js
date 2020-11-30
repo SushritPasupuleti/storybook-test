@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ReviewCard from './components/Card/Card';
+import ReviewStepper from './components/Stepper/Stepper';
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
         <ReviewCard></ReviewCard>
         <ReviewCard></ReviewCard>
       </div>
+      <br></br>
+      <div style={{display: 'flex', flexDirection: 'row', padding: '1rem'}}>
+        <ReviewStepper></ReviewStepper>
+      </div>
+
 
     </div>
   );
