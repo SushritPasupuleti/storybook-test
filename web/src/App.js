@@ -21,6 +21,8 @@ function App() {
       </header>
       <div style={{display: 'flex', flexDirection: 'row', padding: '1rem'}}>
         <ReviewCard></ReviewCard>
+        <ReviewCard></ReviewCard>
+        <ReviewCard></ReviewCard>
       </div>
 
     </div>
