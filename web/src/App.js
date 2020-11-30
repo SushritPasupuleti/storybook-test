@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import ReviewCard from './components/card';
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <div style={{display: 'flex', flexDirection: 'row', padding: '1rem'}}>
+        <ReviewCard></ReviewCard>
+      </div>
+
     </div>
   );
 }
