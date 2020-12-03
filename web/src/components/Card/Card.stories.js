@@ -4,23 +4,15 @@ import ReviewCard from './Card';
 import { Meta } from "@storybook/react";
 import { withDesign } from 'storybook-addon-designs'
 
-// const Template = (args) => <ReviewCard {...args}/>
-
-// export const Primary = Template.bind({})
-
-// Primary.args = {
-//   avatar: "A",
-//   title: "The Title",
-//   subtitle: "The Sub-title",
-//   body: "The body",
-// }
-
 export default {
   title: 'ReviewCard',
   parameters: {
     component: ReviewCard,
   },
   decorators: [withDesign],
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 };
 
 export const Template = (args) => <ReviewCard {...args}></ReviewCard>
@@ -38,6 +30,7 @@ Primary.args = {
   title: "The Title",
   subtitle: "The Sub-title",
   body: "The body",
+  backgroundColor: '#e00',
 }
 
 Primary.parameters = {
@@ -46,10 +39,3 @@ Primary.parameters = {
     url: 'https://www.figma.com/file/JbArU62KFUUlOFK4VKJIjE/Storybook-test?node-id=1%3A3',
   },
 }
-// storiesOf('ReviewCard', module)
-//     .add('default', args => <ReviewCard></ReviewCard>, {
-//         design: {
-//           type: 'figma',
-//           url: 'https://www.figma.com/file/JbArU62KFUUlOFK4VKJIjE/Storybook-test?node-id=1%3A3',
-//         },
-//       });
