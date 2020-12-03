@@ -16,7 +16,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-import { rgb2hex } from './../../utils/colors';
+// import { rgb2hex } from './../../utils/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,7 +54,7 @@ function ReviewCard(props) {
     <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" style={{backgroundColor:rgb2hex(props.backgroundColor)}}>
+          <Avatar aria-label="recipe" style={{backgroundColor:props.backgroundColor}}>
             {props.avatar}
           </Avatar>
         }
