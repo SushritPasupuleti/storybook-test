@@ -16,6 +16,8 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
+import { rgb2hex } from './../../utils/colors';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -52,7 +54,7 @@ function ReviewCard(props) {
     <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" backgroundColor={props.backgroundColor}>
+          <Avatar aria-label="recipe" style={{backgroundColor:rgb2hex(props.backgroundColor)}}>
             {props.avatar}
           </Avatar>
         }
@@ -94,7 +96,7 @@ function ReviewCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method: {props.backgroundColor}</Typography>
+          <Typography paragraph>Method: </Typography>
           <Typography paragraph>
             Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
             aside for 10 minutes.
