@@ -1,14 +1,14 @@
 // if you use expo remove this line
 import { AppRegistry } from 'react-native';
 
-import {getStorybookUI, configure, addDecorator} from '@storybook/react-native';
+import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import './rn-addons';
 import * as React from 'react';
-import {Text, View} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
@@ -30,15 +30,19 @@ AppRegistry.registerComponent('%APP_NAME%', () => App);
 
 function HomeScreen() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home!</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      {__DEV__ ?
+        <Text>Home! Dev Env: DEV</Text>
+        :
+        <Text>Home! Dev Env: PROD</Text>
+      }
     </View>
   );
 }
 
 function SettingsScreen() {
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: 'center' }}>
       <StorybookUIRoot></StorybookUIRoot>
     </View>
   );
